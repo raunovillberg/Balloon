@@ -1296,6 +1296,7 @@ public class Balloon private constructor(
     this.overlayBinding.root.setOnClickListener {
       onBalloonOverlayClickListener?.onBalloonOverlayClick()
       if (builder.dismissWhenOverlayClicked) dismiss()
+      if (builder.passTouchEventToAnchor) dismiss()
     }
   }
 
